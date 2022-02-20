@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profilelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180adp"
+        android:background="@color/cabme_app_white"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_20adp"
+        android:paddingBottom="@dimen/_20adp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        >
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_20adp"
+            android:layout_marginTop="@dimen/_20adp"
+            >
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="@dimen/_100adp"
+                android:layout_height="@dimen/_100adp"
+                android:elevation="0dp"
+                app:cardCornerRadius="@dimen/profile_picture_corner_radius"
+                >
+
+            <ImageView
+                    android:id="@+id/profile_image1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    />
+        </androidx.cardview.widget.CardView>
+
+
+        <com.creusent.user.common.custompalette.FontTextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15adp"
+                android:layout_toEndOf="@+id/card_view"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:paddingStart="@dimen/_16adp"
+                android:paddingEnd="@dimen/_16adp"
+                android:text="@string/hello"
+                android:textColor="@color/cabme_app_black"
+                android:textSize="@dimen/_16asp"
+                app:fontName="@string/font_Medium"
+                />
+
+        <com.creusent.user.common.custompalette.FontTextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/_10adp"
+                android:layout_toEndOf="@+id/card_view"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:textAlignment="viewStart"
+                android:paddingStart="@dimen/_16adp"
+                android:paddingEnd="@dimen/_16adp"
+                android:textColor="@color/cabme_app_yellow"
+                android:textSize="@dimen/_16asp"
+                app:fontName="@string/font_Medium"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="android.studio@android.com"
+                android:visibility="gone"
+                />
+    </RelativeLayout>
+</LinearLayout>
